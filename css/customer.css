@@ -1,0 +1,98 @@
+.logo-img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.nav-link{
+    font-family: "Poppins", sans-serif;
+}
+.index-font{
+    font-family: "Poppins", sans-serif;
+}
+#section-portfolio{
+    background: #0b4f6c;
+}
+#section-resume{
+    background: #fff;
+}
+#section-about{
+    background: #eaf9ff;
+}
+.vdo-size{
+    border-radius: 20px;
+    outline: 3px solid #0d7fb0;
+}
+.txt-resume{
+    color: #000;
+    font-weight: 500;
+}
+.card-resume{
+    border-radius: 20px;
+    background: #0d7fb0;
+}
+.card-resu{
+    border-radius: 20px;
+    background: #024b68;
+}
+.color-txt{
+    color: #024b68;
+    font-weight: 500;
+}
+.color-p{
+    color: #000;
+    font-weight: 300;
+}
+.txt-top{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+.card-service{
+    border-radius: 20px;
+}
+.active-hot{
+    background: #585353;
+    outline: 2px solid #fef200;
+}
+/* image portfolio */
+.image{
+    border-radius: 20px;
+}
+.img-fluid{
+    border-radius: 20px;
+}
+.blog-entry{
+    border-radius: 20px;
+}
+.comment-fb{
+    color: #0d7fb0;
+}
+.txt-price{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+.card-ps{
+    background: #0d7fb0;
+    border-radius: 20px;
+}
+.card-activate{
+    border-radius: 20px;
+    outline: 2px solid #fef200;
+}
+.txt-title-content{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+.txt-content{
+    color: #fff;
+    /* font-weight: 500; */
+}
+.pricing-bg{
+    border-radius: 20px;
+    background: #585353;
+}
+.txt-pricing{
+    color: #ffffff;
+}
