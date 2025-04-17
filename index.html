@@ -51,8 +51,25 @@
 		</div>
 	</nav>
 
+	<!-- popup -->
 
+	<div class="popup-container">
+		<div class="popup-content">
+			<img src="assets/img/popup.png" alt="Popup Image" class="img-fluid" onclick="window.open('https://www.facebook.com/profile.php?id=61559057724990', '_blank');">
+			<button class="close-popup" onclick="document.querySelector('.popup-container').style.display='none';">X</button>
+		</div>
+	</div>
 
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			if (!sessionStorage.getItem('popupShown')) {
+				setTimeout(function () {
+					document.querySelector('.popup-container').style.display = 'flex';
+					sessionStorage.setItem('popupShown', 'true');
+				}, 2000); // Show popup after 2 seconds
+			}
+		});
+	</script>
 
 	<section class="site-hero" style="background-image: url(assets/img/cover.jpg);" id="section-home"
 		data-stellar-background-ratio="0.5">
@@ -60,11 +77,42 @@
 			<div class="row intro-text align-items-center justify-content-center">
 				<div class="col-md-10 text-center pt-5">
 
-					<h1 class="site-heading site-animate index-font">Hello, We're <strong class="d-block index-font">1st
-							Design advertising</strong></h1>
-					<strong class="d-block text-white text-uppercase letter-spacing index-font">Make your work to
-						ezz.</strong>
+					<h1 class="site-heading site-animate index-font">
+						<span id="typed-text" style="display: inline-block; min-height: 1em; font-weight: bold;"></span>
+						<!-- <strong class="d-block index-font">1st Design advertising</strong> -->
+					</h1>
+					<script>
+						document.addEventListener('DOMContentLoaded', function () {
+							const texts = ["Hello, We're 1st Design Advertising!", "Create your dream to design", "Every this is possible"];
+							let index = 0;
+							let textIndex = 0;
+							const speed = 100; // typing speed in milliseconds
+							const delayBetweenTexts = 2000; // delay between texts in milliseconds
+							const typedTextElement = document.getElementById('typed-text');
 
+							function typeText() {
+								if (index < texts[textIndex].length) {
+									typedTextElement.textContent += texts[textIndex].charAt(index);
+									index++;
+									setTimeout(typeText, speed);
+								} else {
+									setTimeout(() => {
+										typedTextElement.textContent = '';
+										index = 0;
+										textIndex = (textIndex + 1) % texts.length;
+										typeText();
+									}, delayBetweenTexts);
+								}
+							}
+
+							typeText();
+						});
+					</script>
+
+					<strong class="d-block text-white text-uppercase letter-spacing index-font">Make your work to
+						ezz.
+					</strong>
+					
 				</div>
 			</div>
 		</div>
